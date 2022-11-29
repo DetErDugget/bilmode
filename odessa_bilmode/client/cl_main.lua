@@ -50,15 +50,15 @@ RegisterCommand('carlist', function()
             txt = 'Kan købes for '..v.pris,
             icon = 'fa-solid fa-face-grin-tears',
             params = {
-                event = 'odessa_bilmode:client:buymode', -- event name
+                event = 'odessa_bilmode:client:buymode', 
                 args = {
-                    nummerplade = v.nummerplade, -- value we want to pass
+                    nummerplade = v.nummerplade,
                     pris = v.pris
                 }
             }
         }
     end
-    exports['qb-menu']:openMenu(carlist) -- open our menu
+    exports['qb-menu']:openMenu(carlist)
 end)
 
 RegisterNetEvent('odessa_bilmode:client:buymode', function(data)
