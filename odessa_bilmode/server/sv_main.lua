@@ -9,7 +9,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 -- SÆLG BIL
 RegisterNetEvent('odessa_bilmode:server:sale', function(plate,price,model)
 	local src = source
-	local result = exports.oxmysql:executeSync('SELECT * FROM brugtebiler WHERE nummerplade = @nummberplade', {
+	local result = exports.oxmysql:executeSync('SELECT * FROM brugtebiler WHERE nummerplade = @nummerplade', {
 		['@nummerplade'] = plate
 	})
 	if result[1] then
