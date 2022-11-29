@@ -4,16 +4,6 @@
 -- Originally made for OdessaRP
 QBCore = exports['qb-core']:GetCoreObject()
 
-RegisterNetEvent('odessa_reputation:Client:getDbInfo')
-AddEventHandler('odessa_reputation:Client:getDbInfo', function(info)
-	if info ~= nil then
-		dbConnected = true
-		zoneInfo = {}
-		for k, v in pairs(info) do
-			zoneInfo[k] = v
-		end
-	end
-end)
 
 RegisterCommand("sellcar", function(source, args, rawCommand)
 	local ped = PlayerPedId()
